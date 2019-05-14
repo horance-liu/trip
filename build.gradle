@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+group = 'com.huawei.trip'
+version = '1.0.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+  baseName = 'trip'
+  version = '1.0.0'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.codehaus.groovy:groovy-all:2.4.1'
+  testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+
+  // matcher
+  testCompile "org.hamcrest:hamcrest-core:1.3"
+}
